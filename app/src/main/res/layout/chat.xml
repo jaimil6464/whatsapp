@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:orientation="vertical">
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary" />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/chatimg1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/profile"
+        android:tint="@color/white"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/chatimg1"
+        android:text="Username"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtUsernumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:layout_toRightOf="@id/chatimg1"
+        android:layout_below="@id/txtUsername"
+        android:text="Contact No."
+        android:textColor="@color/black"
+        android:textSize="15dp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/phone"
+
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/img2"
+        android:layout_toRightOf="@id/chatimg1"
+        android:layout_marginLeft="250dp"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="12dp"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/videocall"
+
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/camera"
+        android:layout_toRightOf="@id/phone"
+        android:backgroundTint="@color/white"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="12dp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleViewList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolBar"
+        android:layout_above="@id/linear" />
+
+
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"/>
+    <EditText
+        android:id="@+id/hinttext"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Your Message"
+        android:inputType="textPersonName"
+        android:layout_marginLeft="6dp"
+        android:padding="10dp"
+        android:background="@drawable/round"
+
+        android:layout_alignParentBottom="true"
+        />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/hinttext"
+
+
+        android:src="@drawable/send"
+        android:padding="10dp"/>
+
+
+</RelativeLayout>
